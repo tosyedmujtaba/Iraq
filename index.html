@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iraq's Digital Frontier: An ICT Market Infographic</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #F5F5F5;
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 300px;
+            max-height: 400px;
+        }
+        @media (min-width: 768px) {
+            .chart-container {
+                height: 350px;
+            }
+        }
+        .kpi-card {
+            background-color: white;
+            border-radius: 0.5rem;
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+            padding: 1.5rem;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .kpi-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -2px rgb(0 0 0 / 0.1);
+        }
+        .kpi-number {
+            font-size: 3rem;
+            font-weight: 900;
+            color: #00A6ED;
+        }
+        .kpi-label {
+            font-size: 1rem;
+            color: #2F2F2F;
+            margin-top: 0.5rem;
+        }
+        .section-title {
+            font-size: 2.25rem;
+            font-weight: 900;
+            color: #2F2F2F;
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+        .section-subtitle {
+            font-size: 1.125rem;
+            color: #555;
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 3rem auto;
+        }
+        .card {
+            background-color: white;
+            border-radius: 0.5rem;
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+    </style>
+</head>
+<body class="text-[#2F2F2F]">
+
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-3">
+            <div class="flex items-center justify-between">
+                <div class="text-xl font-bold text-[#00A6ED]">Iraq ICT Landscape</div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#overview" class="hover:text-[#00A6ED]">Overview</a>
+                    <a href="#services" class="hover:text-[#00A6ED]">Services</a>
+                    <a href="#geo" class="hover:text-[#00A6ED]">Hubs</a>
+                    <a href="#trends" class="hover:text-[#00A6ED]">Trends</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container mx-auto px-6 py-12">
+
+        <section id="hero" class="text-center mb-20">
+            <h1 class="text-5xl md:text-6xl font-black text-[#00A6ED] mb-4">Iraq's Digital Frontier</h1>
+            <p class="text-xl md:text-2xl text-[#2F2F2F] max-w-3xl mx-auto">
+                An in-depth look at the nation's rapidly evolving Information and Communication Technology sector, a landscape of dynamic growth and opportunity.
+            </p>
+        </section>
+
+        <section id="overview" class="mb-20">
+            <h2 class="section-title">Market at a Glance</h2>
+            <p class="section-subtitle">The Iraqi ICT market is defined by a surge in connectivity and a diverse ecosystem of providers. This digital awakening is creating a fertile ground for innovation and investment across the nation.</p>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="kpi-card">
+                    <div class="kpi-number">78.7%</div>
+                    <div class="kpi-label">Internet Penetration Rate</div>
+                </div>
+                <div class="kpi-card">
+                    <div class="kpi-number">36.2M</div>
+                    <div class="kpi-label">Active Internet Users</div>
+                </div>
+                <div class="kpi-card">
+                    <div class="kpi-number">200+</div>
+                    <div class="kpi-label">Active ICT Providers & Resellers</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="mb-20">
+            <div class="card">
+                <h3 class="text-2xl font-bold text-center mb-4">Provider Landscape Composition</h3>
+                <p class="text-center text-gray-600 mb-8">The market is a fragmented mix of system integrators, dedicated service providers, and resellers, each playing a distinct role in the ecosystem.</p>
+                <div class="chart-container h-96">
+                    <canvas id="marketCompositionChart"></canvas>
+                </div>
+            </div>
+        </section>
+
+        <section id="services" class="mb-20">
+            <h2 class="section-title">Core Service Categories</h2>
+            <p class="section-subtitle">From cloud-based software to foundational web services, Iraq's ICT sector offers a growing portfolio of digital solutions, though market maturity varies significantly between segments.</p>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="card text-center">
+                    <h3 class="text-xl font-bold mb-2">SaaS</h3>
+                    <p class="text-gray-600 mb-4 h-24">An emerging market with high potential, currently a mix of local innovators and global giants delivered via partners.</p>
+                    <div class="chart-container h-48">
+                        <canvas id="saasChart"></canvas>
+                    </div>
+                </div>
+                <div class="card text-center">
+                    <h3 class="text-xl font-bold mb-2">UCaaS & VPBX</h3>
+                    <p class="text-gray-600 mb-4 h-24">Demand for flexible communication is rising, with international vendors leading the charge through local telecom operators.</p>
+                    <div class="chart-container h-48">
+                        <canvas id="ucaasChart"></canvas>
+                    </div>
+                </div>
+                <div class="card text-center">
+                    <h3 class="text-xl font-bold mb-2">CCaaS</h3>
+                    <p class="text-gray-600 mb-4 h-24">In its early stages, this segment is heavily reliant on global leaders for large enterprise deployments.</p>
+                    <div class="chart-container h-48">
+                        <canvas id="ccaasChart"></canvas>
+                    </div>
+                </div>
+                <div class="card text-center">
+                    <h3 class="text-xl font-bold mb-2">Web Hosting</h3>
+                    <p class="text-gray-600 mb-4 h-24">A mature and competitive segment with a strong presence of local providers offering foundational web services.</p>
+                    <div class="chart-container h-48">
+                        <canvas id="hostingChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="geo" class="mb-20">
+            <h2 class="section-title">Geographical ICT Hubs</h2>
+            <p class="section-subtitle">ICT activity is concentrated in major urban and economic centers, each fostering a unique ecosystem of tech companies, talent, and investment.</p>
+            <div class="card">
+                <div class="relative w-full h-[500px] bg-gray-100 rounded-lg p-4 flex items-center justify-center">
+                    <div class="absolute text-center" style="top: 20%; left: 45%;">
+                        <div class="w-4 h-4 bg-[#00A6ED] rounded-full animate-ping"></div>
+                        <div class="font-bold">Erbil</div>
+                        <p class="text-xs text-gray-600">Growing Tech Hub</p>
+                    </div>
+                    <div class="absolute text-center" style="top: 35%; left: 30%;">
+                        <div class="w-4 h-4 bg-[#7FB800] rounded-full animate-ping"></div>
+                        <div class="font-bold">Sulaymaniyah</div>
+                        <p class="text-xs text-gray-600">Startup Ecosystem</p>
+                    </div>
+                    <div class="absolute text-center" style="top: 50%; left: 55%;">
+                        <div class="w-4 h-4 bg-[#FFB400] rounded-full animate-ping"></div>
+                        <div class="font-bold">Baghdad</div>
+                        <p class="text-xs text-gray-600">Primary ICT Center</p>
+                    </div>
+                    <div class="absolute text-center" style="top: 75%; left: 65%;">
+                        <div class="w-4 h-4 bg-[#F6511D] rounded-full animate-ping"></div>
+                        <div class="font-bold">Basra</div>
+                        <p class="text-xs text-gray-600">Economic & Industrial Hub</p>
+                    </div>
+                    <div class="text-6xl font-black text-gray-200 select-none">IRAQ</div>
+                </div>
+            </div>
+        </section>
+
+        <section id="trends" class="mb-20">
+            <h2 class="section-title">Key Growth Trends</h2>
+            <p class="section-subtitle">Several powerful trends are converging to accelerate Iraq's digital journey, creating a cycle of investment, innovation, and adoption.</p>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="card">
+                    <h3 class="text-xl font-bold text-[#00A6ED] mb-2">1. Digital Transformation</h3>
+                    <p>Government initiatives to digitize public services are creating massive demand for ICT solutions, modernizing administration and citizen services.</p>
+                </div>
+                <div class="card">
+                    <h3 class="text-xl font-bold text-[#7FB800] mb-2">2. Cloud Adoption</h3>
+                    <p>Businesses are increasingly moving to the cloud for scalability and efficiency, driving strong demand for IaaS, PaaS, and SaaS solutions across all sectors.</p>
+                </div>
+                <div class="card">
+                    <h3 class="text-xl font-bold text-[#FFB400] mb-2">3. Infrastructure Investment</h3>
+                    <p>Major investments in fiber optics and data centers, like the IRAQ-IXP, are enhancing connectivity and laying the groundwork for a robust digital economy.</p>
+                </div>
+                <div class="card">
+                    <h3 class="text-xl font-bold text-[#F6511D] mb-2">4. International Partnerships</h3>
+                    <p>Local firms are partnering with global tech leaders to introduce cutting-edge solutions, bridging the technology gap and accelerating market maturity.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="strategy">
+            <h2 class="section-title">Market Entry & Strategy</h2>
+            <p class="section-subtitle">Navigating the Iraqi ICT market requires a strategic approach, focusing on local partnerships, niche opportunities, and an understanding of the evolving regulatory landscape.</p>
+            <div class="card md:col-span-2">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div>
+                        <h3 class="text-2xl font-bold mb-4">Regulatory Bodies</h3>
+                        <ul class="space-y-4">
+                            <li class="flex items-start">
+                                <span class="text-2xl text-[#00A6ED] mr-4">🏛️</span>
+                                <div>
+                                    <h4 class="font-bold">Ministry of Communications (MoC)</h4>
+                                    <p class="text-gray-600">Sets overall policy and strategy for the national telecom sector.</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-2xl text-[#7FB800] mr-4">📜</span>
+                                <div>
+                                    <h4 class="font-bold">Communications & Media Commission (CMC)</h4>
+                                    <p class="text-gray-600">Independent body for licensing and regulating all telecom and media services.</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-bold mb-4">Actionable Insights</h3>
+                        <ul class="space-y-4">
+                            <li class="flex items-start">
+                                <span class="text-xl text-[#FFB400] mr-4">🤝</span>
+                                <p><strong>Partnerships are Key:</strong> Collaborate with local players to navigate the business and regulatory environment.</p>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-xl text-[#F6511D] mr-4">🎯</span>
+                                <p><strong>Find Your Niche:</strong> Target specific industries like oil & gas, banking, or healthcare with specialized solutions.</p>
+                            </li>
+                             <li class="flex items-start">
+                                <span class="text-xl text-[#00A6ED] mr-4">☁️</span>
+                                <p><strong>Leverage the Cloud:</strong> The high demand for cloud services presents a significant growth opportunity.</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-white mt-20">
+        <div class="container mx-auto px-6 py-4 text-center text-gray-600">
+            <p>&copy; 2025 Iraq ICT Market Analysis. All data is based on market analysis as of early 2024.</p>
+        </div>
+    </footer>
+
+    <script>
+        const tooltipPlugin = {
+            tooltip: {
+                callbacks: {
+                    title: function(tooltipItems) {
+                        const item = tooltipItems[0];
+                        let label = item.chart.data.labels[item.dataIndex];
+                        if (Array.isArray(label)) {
+                            return label.join(' ');
+                        }
+                        return label;
+                    }
+                }
+            }
+        };
+
+        const chartColors = {
+            blue: '#00A6ED',
+            green: '#7FB800',
+            gold: '#FFB400',
+            orange: '#F6511D',
+            gray: '#E0E0E0'
+        };
+
+        function wrapLabel(label, maxWidth) {
+            const words = label.split(' ');
+            const lines = [];
+            let currentLine = '';
+            words.forEach(word => {
+                if ((currentLine + word).length > maxWidth) {
+                    lines.push(currentLine.trim());
+                    currentLine = '';
+                }
+                currentLine += word + ' ';
+            });
+            lines.push(currentLine.trim());
+            return lines;
+        }
+
+        const marketCompositionCtx = document.getElementById('marketCompositionChart');
+        if (marketCompositionCtx) {
+            new Chart(marketCompositionCtx, {
+                type: 'bar',
+                data: {
+                    labels: ['System Integrators', 'ICT Service Providers', 'Resellers'],
+                    datasets: [{
+                        label: 'Estimated Number of Active Players',
+                        data: [60, 90, 50],
+                        backgroundColor: [chartColors.blue, chartColors.green, chartColors.gold],
+                        borderColor: '#ffffff',
+                        borderWidth: 2
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                       ...tooltipPlugin,
+                        legend: {
+                            display: false
+                        }
+                    },
+                    scales
