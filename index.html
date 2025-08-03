@@ -71,6 +71,24 @@
             padding: 1.5rem;
             margin-bottom: 1.5rem;
         }
+        .loader {
+            width: 48px;
+            height: 48px;
+            border: 5px solid #FFF;
+            border-bottom-color: #00A6ED;
+            border-radius: 50%;
+            display: inline-block;
+            box-sizing: border-box;
+            animation: rotation 1s linear infinite;
+        }
+        @keyframes rotation {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
     </style>
 </head>
 <body class="text-[#2F2F2F]">
@@ -82,8 +100,10 @@
                 <div class="hidden md:flex space-x-8">
                     <a href="#overview" class="hover:text-[#00A6ED]">Overview</a>
                     <a href="#services" class="hover:text-[#00A6ED]">Services</a>
-                    <a href="#geo" class="hover:text-[#00A6ED]">Hubs</a>
+                    <a href="#detailed-analysis" class="hover:text-[#00A6ED]">Detailed Analysis</a>
+                    <a href="#ptt-analysis" class="hover:text-[#00A6ED]">PTT Analysis</a>
                     <a href="#trends" class="hover:text-[#00A6ED]">Trends</a>
+                    <a href="#strategy" class="hover:text-[#00A6ED]">AI Strategy</a>
                 </div>
             </div>
         </nav>
@@ -162,6 +182,144 @@
             </div>
         </section>
 
+        <section id="detailed-analysis" class="mb-20">
+            <h2 class="section-title">Detailed Market Assessment</h2>
+             <p class="section-subtitle">ICT in Iraq isn’t just about fibre cables and towers any more; it’s a mosaic of integrators, cloud vendors, SaaS start‑ups and thousands of resellers stitching together connectivity and applications for a market hungry for digital services. Below is a structured assessment of that landscape.</p>
+            <div class="card space-y-8">
+                <div>
+                    <h3 class="text-2xl font-bold mb-4">Market Overview – Number of Players</h3>
+                    <ul class="space-y-4 list-disc list-inside text-gray-700">
+                        <li><strong>System integrators and ICT service providers:</strong> Iraq’s enterprise IT market is still dominated by a handful of large integrators—Onyxes Technologies in Baghdad (over 160 employees and four operations centres) describes itself as a leading systems integrator and technology service provider. Regional firms such as METCO (Kuwait’s MassilaTech) also operate offices in Iraq, employing more than 600 professionals across the Gulf and offering unified communications, networks and data‑centre solutions. Alongside these, several dozen local integrators (e.g., Selina‑ICT in Erbil, Sharpsoft, Snawbar, Freeone Space, Ankido, SharpSoft, etc.) provide data‑centre, virtualization, security and managed‑services capabilities. Combining local integrators and regional entrants yields ~50–60 active system integrators/ICT service providers.</li>
+                        <li><strong>Hosting and cloud services:</strong> TechBehemoths’ July 2025 listing shows 14 companies in Iraq providing hosting and cloud services. These include Hoster.iq, which registers Iraqi domains and offers high‑performance hosting with branches in Baghdad, Basra and Erbil, and IQ Hosting, which has offered shared/reseller hosting, VPS and dedicated servers since 2008.</li>
+                        <li><strong>SaaS start-ups:</strong> According to Tracxn, the SaaS sector in Iraq comprised 26 companies as of 12 July 2025, of which one had external funding. Notable examples include Rigt (a fintech SaaS provider) and Lezzoo (an on‑demand superapp) with combined revenues around US$26.9 million.</li>
+                        <li><strong>Resellers and small ISPs:</strong> Beyond licensed providers, Iraq has a vast informal ecosystem of Wi‑Fi resellers—estimated at 8,000 in our prior fixed‑line report—who resell bandwidth from national carriers and international ISPs. Many of these resellers also offer basic hosting, cloud storage and VoIP services.</li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="text-2xl font-bold mb-4">Service-Category Segmentation</h3>
+                    <div class="overflow-x-auto">
+                        <table class="w-full text-sm text-left text-gray-500">
+                            <thead class="text-xs text-gray-700 uppercase bg-gray-50">
+                                <tr>
+                                    <th scope="col" class="px-6 py-3">Service Category</th>
+                                    <th scope="col" class="px-6 py-3">Examples of Iraqi Providers & Notes</th>
+                                    <th scope="col" class="px-6 py-3">Indicative Number of Players</th>
+                                    <th scope="col" class="px-6 py-3">Evidence/Insight</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="bg-white border-b">
+                                    <td class="px-6 py-4 font-medium text-gray-900">Software as a Service (SaaS)</td>
+                                    <td class="px-6 py-4">Start‑ups providing cloud‑based apps for education, fintech and logistics. Examples include Rigt and Lezzoo, which together generated ~US$26.9 M in 2024 revenue. The EdTech firms Eduba and iSchool (Baghdad) appear among Tracxn’s top companies.</td>
+                                    <td class="px-6 py-4">≈26 SaaS companies (mostly small start‑ups).</td>
+                                    <td class="px-6 py-4">SaaS remains nascent; only one company has raised external funding.</td>
+                                </tr>
+                                <tr class="bg-gray-50 border-b">
+                                    <td class="px-6 py-4 font-medium text-gray-900">Virtual PBX / UCaaS</td>
+                                    <td class="px-6 py-4">Local integrators (Ankido, Selina‑ICT) deploy unified‑communications suites based on Cisco, Microsoft and Avaya, while regional carrier Talia holds a full telecom licence and provides VoIP telephony, unified communications and HD video conferencing. Global cloud PBX providers (e.g., CommPeak) offer hosted PBX in Iraq.</td>
+                                    <td class="px-6 py-4">≈15–20 providers including regional players (Talia, METCO, Vizocom) and global vendors accessible via partners.</td>
+                                    <td class="px-6 py-4">Talia’s unified‑communications service integrates voice, video and Outlook/CRM integration. METCO markets UCaaS and CCaaS platforms across its Gulf operations.</td>
+                                </tr>
+                                <tr class="bg-white border-b">
+                                    <td class="px-6 py-4 font-medium text-gray-900">Contact Centre as a Service (CCaaS)</td>
+                                    <td class="px-6 py-4">Ankido positions CCaaS as part of its cloud services portfolio. METCO highlights CCaaS solutions integrated with unified communications. Multinationals like Genesys, NICE and RingCentral serve Iraqi enterprises through regional distributors.</td>
+                                    <td class="px-6 py-4">≈10 providers (local integrators plus global platforms delivered via regional partners).</td>
+                                    <td class="px-6 py-4">The market is still small; CCaaS uptake is tied to call‑centre outsourcing for banks, telecom operators and government agencies.</td>
+                                </tr>
+                                <tr class="bg-gray-50 border-b">
+                                    <td class="px-6 py-4 font-medium text-gray-900">Website building and hosting</td>
+                                    <td class="px-6 py-4">Hoster.iq offers .iq domain registration and hosting packages with branches in Baghdad, Basra and Erbil. IQ Hosting provides shared, reseller and VPS hosting since 2008. Other providers include Avanetco, Iraq‑Serv, Enkidu.Tech and several resellers.</td>
+                                    <td class="px-6 py-4">≈10–15 providers focused on hosting, domain registration and website design; some also offer reseller hosting.</td>
+                                    <td class="px-6 py-4">Hoster positions itself as Iraq’s premier platform for domain registration and professional hosting. IQ Hosting advertises web hosting, VPS and dedicated servers.</td>
+                                </tr>
+                                <tr class="bg-white border-b">
+                                    <td class="px-6 py-4 font-medium text-gray-900">Infrastructure and managed services</td>
+                                    <td class="px-6 py-4">Onyxes (Baghdad) delivers end‑to‑end system integration, managed services and big‑data/SOC solutions with over 160 employees and operations in four countries. Selina‑ICT (Erbil) provides data‑centre, virtualization, networking and security solutions. Ankido offers IaaS, PaaS, cybersecurity‑as‑a‑service, contact‑centre‑as‑a‑service and AI solutions.</td>
+                                    <td class="px-6 py-4">≈40–50 integrators/managed‑service providers when combining national firms and regional entrants.</td>
+                                    <td class="px-6 py-4">The integrator market is moderately competitive; many players partner with Cisco, Fortinet, Dell and Microsoft.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                 <div>
+                    <h3 class="text-2xl font-bold mb-4">Actionable Insights for Market Entry</h3>
+                    <ul class="space-y-4 list-disc list-inside text-gray-700">
+                        <li><strong>Partner with established integrators:</strong> Local system integrators (Onyxes, Ankido, Selina‑ICT) have deep relationships with government and oil‑sector clients. Collaborating with them can accelerate market entry and mitigate regulatory hurdles.</li>
+                        <li><strong>Target Erbil for SaaS and cloud:</strong> The Kurdistan Region’s relative stability and concentration of tech start‑ups make Erbil a logical base for SaaS and cloud services. Opening a small development centre or partnering with local incubators can build brand presence.</li>
+                        <li><strong>Offer Arabic‑first UCaaS/CCaaS solutions:</strong> There are few local UCaaS and CCaaS providers (≈10). A platform with Arabic‑language interfaces and integration with Iraqi CRM/ERP systems would stand out.</li>
+                        <li><strong>Comply with CMC licensing:</strong> Before offering internet or cloud services, secure the appropriate CMC licence. Factor in a three‑year licence term and allow for MoC approvals for infrastructure deployment.</li>
+                        <li><strong>Invest in security and data‑centre services:</strong> Cybersecurity demand is rising, and government agencies are building data‑centre capacity. Managed security services or SOC offerings tied to data‑centre colocation could differentiate a new entrant.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        
+        <section id="ptt-analysis" class="mb-20">
+            <h2 class="section-title">Push-to-Talk (PTT) Market Analysis</h2>
+            <p class="section-subtitle">A deep dive into the Push-to-Talk over Cellular (PoC) market in Iraq, a critical communication technology for business and mission-critical operations.</p>
+            <div class="card space-y-8">
+                <div>
+                    <h3 class="text-2xl font-bold mb-2">PMR vs. PoC Technology</h3>
+                    <p class="mb-4 text-gray-600">Before PoC became a mature technology, Professional Mobile Radio (PMR) was the standard for mission-critical users. Understanding the shift from PMR to PoC is key to grasping the market opportunity. PoC leverages cellular networks to offer enhanced features and global coverage, dramatically lowering the entry barrier for many businesses.</p>
+                </div>
+                <div class="overflow-x-auto">
+                    <table class="w-full text-sm text-left text-gray-500">
+                        <thead class="text-xs text-gray-700 uppercase bg-gray-50">
+                            <tr>
+                                <th scope="col" class="px-6 py-3">Feature</th>
+                                <th scope="col" class="px-6 py-3">Traditional PMR (Analogue, DMR, TETRA)</th>
+                                <th scope="col" class="px-6 py-3">PoC (Push-to-Talk over Cellular)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="bg-white border-b"><td class="px-6 py-4 font-medium">Technology</td><td class="px-6 py-4">Radio-based (UHF/VHF)</td><td class="px-6 py-4">Cellular (LTE/5G) & Wi-Fi</td></tr>
+                            <tr class="bg-gray-50 border-b"><td class="px-6 py-4 font-medium">Coverage</td><td class="px-6 py-4">Limited, requires repeaters</td><td class="px-6 py-4">Nationwide/Global</td></tr>
+                            <tr class="bg-white border-b"><td class="px-6 py-4 font-medium">Data Capabilities</td><td class="px-6 py-4">Limited (Text, GPS)</td><td class="px-6 py-4">Rich (Video, Multimedia)</td></tr>
+                            <tr class="bg-gray-50 border-b"><td class="px-6 py-4 font-medium">Infrastructure Cost</td><td class="px-6 py-4">High (Dedicated infrastructure)</td><td class="px-6 py-4">Low (Uses existing cell networks)</td></tr>
+                            <tr class="bg-white border-b"><td class="px-6 py-4 font-medium">Cost Model</td><td class="px-6 py-4">High CAPEX, lower OPEX</td><td class="px-6 py-4">Low CAPEX, subscription OPEX</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div>
+                    <h3 class="text-2xl font-bold mb-4 mt-8">Potential PoC Market Size in Iraq by Industry</h3>
+                    <p class="mb-4 text-gray-600">The total addressable market for PoC devices in Iraq is estimated to be over 32,500 units, with significant opportunities across various sectors. This analysis highlights key industries and their potential demand.</p>
+                    <div class="chart-container h-96">
+                        <canvas id="pocMarketChart"></canvas>
+                    </div>
+                </div>
+
+                <div>
+                    <h3 class="text-2xl font-bold mb-4 mt-8">Industry Deep Dive & Use Cases</h3>
+                     <div class="space-y-6">
+                        <div>
+                            <h4 class="text-xl font-bold">Private Security (~5,000 units)</h4>
+                            <p>This is potentially the largest market. PoC solves major pain points of traditional radios like limited coverage and high cost, while adding features like GPS tracking and video, enhancing safety and efficiency for security firms.</p>
+                        </div>
+                        <div>
+                            <h4 class="text-xl font-bold">Energy & Utilities (~16,500 units)</h4>
+                            <p>Includes Oil & Gas, Electricity, and Water. While some sites have existing private networks, PoC is ideal for coordinating field maintenance and managing distributed assets over wide areas. ATEX (explosion-proof) devices are critical for the Oil & Gas sector.</p>
+                        </div>
+                         <div>
+                            <h4 class="text-xl font-bold">Transportation (~3,000 units)</h4>
+                            <p>Airports and railways require seamless communication for ground handling, security, and operational coordination. PoC provides the wide-area coverage needed for these large, complex environments.</p>
+                        </div>
+                         <div>
+                            <h4 class="text-xl font-bold">Healthcare & Hospitality (~7,000 units)</h4>
+                            <p>Hospitals and large hotels can use PoC for coordinating staff, managing security, and improving service efficiency without the need for expensive private radio infrastructure.</p>
+                        </div>
+                    </div>
+                </div>
+                 <div>
+                    <h3 class="text-2xl font-bold mb-4 mt-8">Conclusion & Go-to-Market</h3>
+                    <p class="text-gray-700">There is a significant, untapped market for PoC solutions in Iraq. Success depends on educating end-users on the benefits over traditional radio, targeting key industries like private security and utilities, and leveraging the nationwide coverage of cellular networks. Telcos like Asiacell and Zain are well-positioned to capture this market by offering PoC as a value-added service to their existing and new enterprise customers.</p>
+                </div>
+            </div>
+        </section>
+
+
         <section id="geo" class="mb-20">
             <h2 class="section-title">Geographical ICT Hubs</h2>
             <p class="section-subtitle">ICT activity is concentrated in major urban and economic centers, each fostering a unique ecosystem of tech companies, talent, and investment.</p>
@@ -216,45 +374,27 @@
         </section>
 
         <section id="strategy">
-            <h2 class="section-title">Market Entry & Strategy</h2>
-            <p class="section-subtitle">Navigating the Iraqi ICT market requires a strategic approach, focusing on local partnerships, niche opportunities, and an understanding of the evolving regulatory landscape.</p>
+            <h2 class="section-title">AI-Powered Strategy Generator</h2>
+            <p class="section-subtitle">Leverage AI to generate a tailored market entry strategy. Select an industry below to receive customized insights based on the current market data.</p>
             <div class="card md:col-span-2">
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                 <div class="space-y-4">
                     <div>
-                        <h3 class="text-2xl font-bold mb-4">Regulatory Bodies</h3>
-                        <ul class="space-y-4">
-                            <li class="flex items-start">
-                                <span class="text-2xl text-[#00A6ED] mr-4">🏛️</span>
-                                <div>
-                                    <h4 class="font-bold">Ministry of Communications (MoC)</h4>
-                                    <p class="text-gray-600">Sets overall policy and strategy for the national telecom sector.</p>
-                                </div>
-                            </li>
-                            <li class="flex items-start">
-                                <span class="text-2xl text-[#7FB800] mr-4">📜</span>
-                                <div>
-                                    <h4 class="font-bold">Communications & Media Commission (CMC)</h4>
-                                    <p class="text-gray-600">Independent body for licensing and regulating all telecom and media services.</p>
-                                </div>
-                            </li>
-                        </ul>
+                        <label for="industry-select" class="block text-sm font-medium text-gray-700">Select an Industry:</label>
+                        <select id="industry-select" class="mt-1 block w-full pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-[#00A6ED] focus:border-[#00A6ED] sm:text-sm rounded-md">
+                            <option>Banking & Fintech</option>
+                            <option>Oil & Gas</option>
+                            <option>Healthcare</option>
+                            <option>Retail & E-commerce</option>
+                            <option>Education</option>
+                        </select>
                     </div>
-                    <div>
-                        <h3 class="text-2xl font-bold mb-4">Actionable Insights</h3>
-                        <ul class="space-y-4">
-                            <li class="flex items-start">
-                                <span class="text-xl text-[#FFB400] mr-4">🤝</span>
-                                <p><strong>Partnerships are Key:</strong> Collaborate with local players to navigate the business and regulatory environment.</p>
-                            </li>
-                            <li class="flex items-start">
-                                <span class="text-xl text-[#F6511D] mr-4">🎯</span>
-                                <p><strong>Find Your Niche:</strong> Target specific industries like oil & gas, banking, or healthcare with specialized solutions.</p>
-                            </li>
-                             <li class="flex items-start">
-                                <span class="text-xl text-[#00A6ED] mr-4">☁️</span>
-                                <p><strong>Leverage the Cloud:</strong> The high demand for cloud services presents a significant growth opportunity.</p>
-                            </li>
-                        </ul>
+                    <button id="generate-strategy-btn" class="w-full bg-[#00A6ED] text-white font-bold py-2 px-4 rounded-md hover:bg-[#008bc5] transition-colors flex items-center justify-center">
+                        Generate Tailored Strategy
+                    </button>
+                </div>
+                <div id="strategy-output-container" class="mt-8 pt-6 border-t border-gray-200">
+                    <div id="strategy-output" class="prose max-w-none">
+                         <p class="text-center text-gray-500">Your generated strategy will appear here.</p>
                     </div>
                 </div>
             </div>
@@ -330,4 +470,169 @@
                             display: false
                         }
                     },
-                    scales
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            title: {
+                                display: true,
+                                text: 'Number of Companies'
+                            }
+                        }
+                    }
+                }
+            });
+        }
+        
+        function createDonutChart(ctx, label, data, colors) {
+             if(ctx) {
+                new Chart(ctx, {
+                    type: 'doughnut',
+                    data: {
+                        labels: ['International/Partner-Led', 'Local Providers'],
+                        datasets: [{
+                            label: label,
+                            data: data,
+                            backgroundColor: colors,
+                            borderColor: '#ffffff',
+                            borderWidth: 2
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        plugins: {
+                            ...tooltipPlugin,
+                            legend: {
+                                position: 'bottom',
+                                labels: {
+                                    boxWidth: 12
+                                }
+                            }
+                        }
+                    }
+                });
+            }
+        }
+
+        createDonutChart(document.getElementById('saasChart'), 'SaaS Market', [70, 30], [chartColors.blue, chartColors.gray]);
+        createDonutChart(document.getElementById('ucaasChart'), 'UCaaS Market', [85, 15], [chartColors.green, chartColors.gray]);
+        createDonutChart(document.getElementById('ccaasChart'), 'CCaaS Market', [95, 5], [chartColors.gold, chartColors.gray]);
+        createDonutChart(document.getElementById('hostingChart'), 'Web Hosting Market', [40, 60], [chartColors.orange, chartColors.gray]);
+        
+        const pocMarketCtx = document.getElementById('pocMarketChart');
+        if(pocMarketCtx) {
+            new Chart(pocMarketCtx, {
+                type: 'pie',
+                data: {
+                    labels: ['Energy & Utilities', 'Healthcare', 'Private Security', 'Transportation', 'Other'],
+                    datasets: [{
+                        label: 'Estimated PoC Units',
+                        data: [16500, 6000, 5000, 3000, 2000],
+                        backgroundColor: [
+                            '#00A6ED',
+                            '#7FB800',
+                            '#FFB400',
+                            '#F6511D',
+                            '#6A6A6A'
+                        ],
+                        borderColor: '#ffffff',
+                        borderWidth: 2
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        ...tooltipPlugin,
+                        legend: {
+                            position: 'right',
+                        },
+                        title: {
+                            display: true,
+                            text: 'Estimated PoC Device Demand by Industry'
+                        }
+                    }
+                }
+            });
+        }
+
+
+        const generateBtn = document.getElementById('generate-strategy-btn');
+        const industrySelect = document.getElementById('industry-select');
+        const strategyOutput = document.getElementById('strategy-output');
+
+        async function callGeminiApi(prompt, retries = 3, delay = 1000) {
+            const apiKey = "";
+            const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-05-20:generateContent?key=${apiKey}`;
+            
+            try {
+                const payload = { contents: [{ role: "user", parts: [{ text: prompt }] }] };
+                const response = await fetch(apiUrl, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(payload)
+                });
+
+                if (!response.ok) {
+                    if (response.status === 429 && retries > 0) {
+                        await new Promise(res => setTimeout(res, delay));
+                        return callGeminiApi(prompt, retries - 1, delay * 2);
+                    }
+                    throw new Error(`API request failed with status ${response.status}`);
+                }
+
+                const result = await response.json();
+                if (result.candidates && result.candidates.length > 0 && result.candidates[0].content && result.candidates[0].content.parts && result.candidates[0].content.parts.length > 0) {
+                    return result.candidates[0].content.parts[0].text;
+                } else {
+                    throw new Error("Invalid response structure from API.");
+                }
+            } catch (error) {
+                if (retries > 0) {
+                    await new Promise(res => setTimeout(res, delay));
+                    return callGeminiApi(prompt, retries - 1, delay * 2);
+                }
+                console.error("Error calling Gemini API:", error);
+                return "Failed to generate strategy after multiple attempts. Please try again later.";
+            }
+        }
+
+
+        generateBtn.addEventListener('click', async () => {
+            const selectedIndustry = industrySelect.value;
+            strategyOutput.innerHTML = '<div class="flex justify-center items-center"><div class="loader"></div></div>';
+
+            const prompt = `
+                You are an expert ICT market analyst for Iraq. Your analysis is based on the following key data points:
+                - Internet Penetration: 78.7%
+                - Active Providers: Over 200
+                - Key Hubs: Baghdad, Erbil, Sulaymaniyah, Basra
+                - Core Trends: Strong push for digital transformation, growing cloud adoption, and increasing international partnerships.
+
+                Generate a concise, actionable market entry strategy for a new ICT company specializing in solutions for the **${selectedIndustry}** sector in Iraq. 
+                
+                The strategy should be formatted in Markdown and include the following sections:
+                1.  **Core Service Offering:** What specific ICT services are most needed in this sector?
+                2.  **Target Customer Profile:** Who are the ideal initial customers? (e.g., specific types of banks, hospitals, oil companies).
+                3.  **Key Partnership Opportunities:** Who should this new company partner with for success? (e.g., local distributors, government agencies, specific tech vendors).
+                4.  **Go-to-Market Tactic:** A unique first step to gain traction.
+            `;
+
+            const generatedText = await callGeminiApi(prompt);
+            
+            let formattedHtml = generatedText
+                .replace(/### (.*?)\n/g, '<h3 class="text-lg font-bold mt-4 mb-2">$1</h3>')
+                .replace(/## (.*?)\n/g, '<h2 class="text-xl font-bold mt-6 mb-3">$1</h2>')
+                .replace(/\*\*1\. (.*?):/g, '<h4><strong>1. $1:</strong></h4>')
+                .replace(/\*\*2\. (.*?):/g, '<h4><strong>2. $1:</strong></h4>')
+                .replace(/\*\*3\. (.*?):/g, '<h4><strong>3. $1:</strong></h4>')
+                .replace(/\*\*4\. (.*?):/g, '<h4><strong>4. $1:</strong></h4>')
+                .replace(/\* (.*?)\n/g, '<li class="ml-5 list-disc">$1</li>')
+                .replace(/\n/g, '<br>');
+
+            strategyOutput.innerHTML = formattedHtml;
+        });
+    </script>
+
+</body>
+</html>
